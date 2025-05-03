@@ -34,6 +34,7 @@ import '@ionic/react/css/palettes/dark.system.css';
 import './theme/variables.css';
 import Header from './components/Header';
 import NavTab from './components/NavTab';
+import Services from './pages/Services';
 
 setupIonicReact();
 
@@ -46,6 +47,9 @@ const App: React.FC = () => (
 					<IonContent className='ion-padding-top ion-padding-horizontal'>
 						<Route exact path="/">
 							<Home />
+						</Route>
+						<Route path='/services'>
+							<Services />
 						</Route>
 					</IonContent>
 				</IonRouterOutlet>
