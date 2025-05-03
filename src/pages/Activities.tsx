@@ -10,7 +10,7 @@ const Activities = () => {
                 <IonSegmentView>
                     <IonSegmentContent id="detente">
                         <div className='ion-margin-vertical'>
-                            <IonCard className='ion-no-margin content__card' routerDirection={'forward'}>
+                            <IonCard className='ion-no-margin content__card' routerDirection={'forward'} routerLink='activites/1'>
                                 <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
                                 <IonCardHeader>
                                     <IonCardTitle children="Nom du service Détente" />
@@ -21,7 +21,7 @@ const Activities = () => {
 
                     <IonSegmentContent id="gastronomie">
                         <div className='ion-margin-vertical'>
-                            <IonCard className='ion-no-margin content__card' routerDirection={'forward'}>
+                            <IonCard className='ion-no-margin content__card' routerDirection={'forward'} routerLink='activites/1'>
                                 <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
                                 <IonCardHeader>
                                     <IonCardTitle children="Nom du service Gastronomie" />
@@ -32,7 +32,7 @@ const Activities = () => {
 
                     <IonSegmentContent id="nature">
                         <div className='ion-margin-vertical'>
-                            <IonCard className='ion-no-margin content__card' routerDirection={'forward'}>
+                            <IonCard className='ion-no-margin content__card' routerDirection={'forward'} routerLink='activites/1'>
                                 <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
                                 <IonCardHeader>
                                     <IonCardTitle children="Nom du service Nature" />
