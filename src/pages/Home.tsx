@@ -1,9 +1,36 @@
+import { IonCard, IonCardHeader, IonCardTitle } from '@ionic/react';
 import './Home.css';
 
 const Home: React.FC = () => {
-  return (
-      <></>
-  );
+	return (
+		<section>
+			<h1>Nom de l'hôtel</h1>
+			<div className='ion-margin-vertical'>
+				<IonCard className='ion-no-margin'>
+					<img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+					<IonCardHeader>
+						<IonCardTitle children="Card Title" />
+					</IonCardHeader>
+				</IonCard>
+			</div>
+			<div className='ion-margin-vertical'>
+				<IonCard className='ion-no-margin'>
+					<img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+					<IonCardHeader>
+						<IonCardTitle children="Card Title" />
+					</IonCardHeader>
+				</IonCard>
+			</div>
+			<div className='ion-margin-vertical'>
+				<IonCard className='ion-no-margin'>
+					<img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+					<IonCardHeader>
+						<IonCardTitle children="Card Title" />
+					</IonCardHeader>
+				</IonCard>
+			</div>
+		</section>
+	);
 };
 
 export default Home;
