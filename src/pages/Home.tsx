@@ -23,10 +23,10 @@ const Home: React.FC = () => {
 					</IonCard>
 				</div>
 				<div className='ion-margin-vertical'>
-					<IonCard className='ion-no-margin content__card'>
+					<IonCard className='ion-no-margin content__card' routerLink='regions' routerDirection={'forward'}>
 						<img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
 						<IonCardHeader>
-							<IonCardTitle children="Card Title" />
+							<IonCardTitle children="Découvrir notre région" />
 						</IonCardHeader>
 					</IonCard>
 				</div>

@@ -2,28 +2,28 @@ import { IonContent, IonLabel, IonSegment, IonSegmentButton, IonSegmentContent, 
 import './Activities.sass'
 import Card from "../components/Card"
 
-const Activities = () => {
+const Regions = () => {
     return(
         <IonContent className='ion-padding-top ion-padding-horizontal'>
             <section>
-                <h1 className="ion-padding-horizontal">Activités et Expériences</h1>
+                <h1 className="ion-padding-horizontal">Découvrir notre région</h1>
 
                 <IonSegmentView>
                     <IonSegmentContent id="detente" className="ion-padding-horizontal">
                         <div className='ion-margin-vertical'>
-                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Détente"} link={"activite/1"}></Card>
+                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Détente"} link={"region/1"}></Card>
                         </div>
                     </IonSegmentContent>
 
                     <IonSegmentContent id="gastronomie" className="ion-padding-horizontal">
-                        <div className='ion-margin-vertical'>                        
-                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Détente"} link={"activite/1"}></Card>
+                        <div className='ion-margin-vertical'>
+                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Gastronomie"} link={"region/1"}></Card>
                         </div>
                     </IonSegmentContent>
 
                     <IonSegmentContent id="nature" className="ion-padding-horizontal">
                         <div className='ion-margin-vertical'>
-                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Détente"} link={"activite/1"}></Card>
+                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Nature"} link={"region/1"}></Card>
                         </div>
                     </IonSegmentContent>
                 </IonSegmentView>
@@ -44,4 +44,4 @@ const Activities = () => {
     )
 }
 
-export default Activities
+export default Regions
