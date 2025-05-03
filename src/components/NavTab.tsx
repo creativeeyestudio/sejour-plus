@@ -7,7 +7,7 @@ const NavTab = () => {
             <IonTabButton tab="services" href='/services'>
                 <IonIcon icon={ bedOutline }></IonIcon>
             </IonTabButton>
-            <IonTabButton>
+            <IonTabButton tab="activites" href='/activites'>
                 <IonIcon icon={ businessOutline }></IonIcon>
             </IonTabButton>
             <IonTabButton>

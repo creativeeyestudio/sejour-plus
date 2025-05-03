@@ -1,5 +1,5 @@
 import { Route } from 'react-router-dom';
-import { IonApp, IonContent, IonRouterOutlet, IonTabs, setupIonicReact } from '@ionic/react';
+import { IonApp, IonRouterOutlet, IonTabs, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 
@@ -35,24 +35,26 @@ import './theme/variables.css';
 import Header from './components/Header';
 import NavTab from './components/NavTab';
 import Services from './pages/Services';
+import Activities from './pages/Activities';
+import Activity from './pages/Activity';
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
-	<Header />
+  	<IonApp>
+		<Header />
 		<IonReactRouter>
 			<IonTabs className='ion-padding-top'>
 				<IonRouterOutlet className='ion-padding-top'>
-					<IonContent className='ion-padding-top ion-padding-horizontal'>
-						<Route exact path="/" render={() => <Home />} />
-						<Route exact path='/services' render={() => <Services />} />
-					</IonContent>
+					<Route exact path="/" render={() => <Home />} />
+					<Route exact path='/services' render={() => <Services />} />
+					<Route exact path='/activites' render={() => <Activities />} />
+					<Route path='/activite/:id' render={() => <Activity />}></Route>
 				</IonRouterOutlet>
 				<NavTab />
 			</IonTabs>
 		</IonReactRouter>
-  </IonApp>
+	</IonApp>
 );
 
 export default App;
