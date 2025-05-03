@@ -4,7 +4,7 @@ import { bedOutline, businessOutline, locationOutline, notificationsOutline } fr
 const NavTab = () => {
     return (
         <IonTabBar slot='bottom'>
-            <IonTabButton>
+            <IonTabButton tab="services" href='/services'>
                 <IonIcon icon={ bedOutline }></IonIcon>
             </IonTabButton>
             <IonTabButton>

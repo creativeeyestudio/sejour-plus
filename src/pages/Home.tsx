@@ -6,10 +6,10 @@ const Home: React.FC = () => {
 		<section className='content'>
 			<h1>Nom de l'hôtel</h1>
 			<div className='ion-margin-vertical'>
-				<IonCard className='ion-no-margin content__card'>
+				<IonCard className='ion-no-margin content__card' routerLink='services' routerDirection={'forward'}>
 					<img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
 					<IonCardHeader>
-						<IonCardTitle children="Card Title" />
+						<IonCardTitle children="Découvrir nos services" />
 					</IonCardHeader>
 				</IonCard>
 			</div>
