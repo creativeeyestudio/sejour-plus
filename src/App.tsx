@@ -39,6 +39,7 @@ import Activities from './pages/Activities';
 import Activity from './pages/Activity';
 import Regions from './pages/Regions';
 import Region from './pages/Region';
+import Infos from './pages/Infos';
 
 setupIonicReact();
 
@@ -54,6 +55,7 @@ const App: React.FC = () => (
 					<Route path='/activite/:id' render={() => <Activity />} />
 					<Route exact path='/regions' render={() => <Regions />} />
 					<Route exact path='/region/:id' render={() => <Region />} />
+					<Route exact path='/infos-hotel' render={() => <Infos />} />
 				</IonRouterOutlet>
 				<NavTab />
 			</IonTabs>

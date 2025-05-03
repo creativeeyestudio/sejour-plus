@@ -13,7 +13,7 @@ const NavTab = () => {
             <IonTabButton tab="regions" href="/regions">
                 <IonIcon icon={ locationOutline }></IonIcon>
             </IonTabButton>
-            <IonTabButton>
+            <IonTabButton tab="infos-hotel" href="/infos-hotel">
                 <IonIcon icon={ notificationsOutline }></IonIcon>
             </IonTabButton>
         </IonTabBar>
