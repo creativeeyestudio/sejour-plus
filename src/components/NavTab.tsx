@@ -1,0 +1,23 @@
+import { IonIcon, IonTabBar, IonTabButton } from "@ionic/react"
+import { bedOutline, businessOutline, locationOutline, notificationsOutline } from 'ionicons/icons';
+
+const NavTab = () => {
+    return (
+        <IonTabBar slot='bottom'>
+            <IonTabButton>
+                <IonIcon icon={ bedOutline }></IonIcon>
+            </IonTabButton>
+            <IonTabButton>
+                <IonIcon icon={ businessOutline }></IonIcon>
+            </IonTabButton>
+            <IonTabButton>
+                <IonIcon icon={ locationOutline }></IonIcon>
+            </IonTabButton>
+            <IonTabButton>
+                <IonIcon icon={ notificationsOutline }></IonIcon>
+            </IonTabButton>
+        </IonTabBar>
+    )
+}
+
+export default NavTab
