@@ -1,8 +1,12 @@
-import { IonHeader } from "@ionic/react"
+import { IonHeader, IonTitle, IonToolbar } from "@ionic/react"
 
 const Header = () => {
     return (
-        <IonHeader></IonHeader>
+        <IonHeader>
+            <IonToolbar>
+                <IonTitle>Séjour+</IonTitle>
+            </IonToolbar>
+        </IonHeader>
     )
 }
 
