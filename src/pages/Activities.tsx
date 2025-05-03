@@ -4,11 +4,11 @@ import './Activities.sass'
 const Activities = () => {
     return(
         <IonContent className='ion-padding-top ion-padding-horizontal'>
-            <section className="ion-padding-horizontal">
-                <h1>Activités et Expériences</h1>
+            <section>
+                <h1 className="ion-padding-horizontal">Activités et Expériences</h1>
 
                 <IonSegmentView>
-                    <IonSegmentContent id="detente">
+                    <IonSegmentContent id="detente" className="ion-padding-horizontal">
                         <div className='ion-margin-vertical'>
                             <IonCard className='ion-no-margin content__card' routerDirection={'forward'} routerLink='activite/1'>
                                 <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
@@ -19,7 +19,7 @@ const Activities = () => {
                         </div>
                     </IonSegmentContent>
 
-                    <IonSegmentContent id="gastronomie">
+                    <IonSegmentContent id="gastronomie" className="ion-padding-horizontal">
                         <div className='ion-margin-vertical'>
                             <IonCard className='ion-no-margin content__card' routerDirection={'forward'} routerLink='activite/1'>
                                 <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
@@ -30,7 +30,7 @@ const Activities = () => {
                         </div>
                     </IonSegmentContent>
 
-                    <IonSegmentContent id="nature">
+                    <IonSegmentContent id="nature" className="ion-padding-horizontal">
                         <div className='ion-margin-vertical'>
                             <IonCard className='ion-no-margin content__card' routerDirection={'forward'} routerLink='activite/1'>
                                 <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
