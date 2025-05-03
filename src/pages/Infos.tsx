@@ -9,22 +9,22 @@ const Infos = () => {
                 <IonRow>
                     <IonCol size='3' className="ion-text-center">
                         <IonButton shape="round" size="large">
-                            <IonIcon slot="icon-only" icon={callOutline}></IonIcon>
+                            <IonIcon slot="icon-only" size="large" icon={callOutline}></IonIcon>
                         </IonButton>
                     </IonCol>
                     <IonCol size='3' className="ion-text-center">
                         <IonButton shape="round" size="large">
-                            <IonIcon slot="icon-only" icon={mailOutline}></IonIcon>
+                            <IonIcon slot="icon-only" size="large" icon={mailOutline}></IonIcon>
                         </IonButton>
                     </IonCol>
                     <IonCol size='3' className="ion-text-center">
                         <IonButton shape="round" size="large">
-                            <IonIcon slot="icon-only" icon={mapOutline}></IonIcon>
+                            <IonIcon slot="icon-only" size="large" icon={mapOutline}></IonIcon>
                         </IonButton>
                     </IonCol>
                     <IonCol size='3' className="ion-text-center">
                         <IonButton shape="round" size="large">
-                            <IonIcon slot="icon-only" icon={linkOutline}></IonIcon>
+                            <IonIcon slot="icon-only" size="large" icon={linkOutline}></IonIcon>
                         </IonButton>
                     </IonCol>
                 </IonRow>
