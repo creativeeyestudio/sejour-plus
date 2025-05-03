@@ -1,4 +1,4 @@
-import { IonButton, IonContent, IonImg } from "@ionic/react"
+import { IonButton, IonContent, IonImg } from '@ionic/react'
 import './Activity.sass'
 
 const Activity = () => {
