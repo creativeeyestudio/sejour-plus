@@ -1,6 +1,11 @@
 /* For information on how to create your own theme, please see:
 http://ionicframework.com/docs/theming/ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
+	--ion-color-scheme: light;
+	
 	--ion-color-primary: #2C3E50;
 	--ion-color-primary-rgb: 44,62,80;
 	--ion-color-primary-contrast: #ffffff;
@@ -64,4 +69,26 @@ http://ionicframework.com/docs/theming/ */
 	--ion-color-dark-shade: #292929;
 	--ion-color-dark-tint: #444444;
 
+}
+
+html {
+	font-size: 16px
+}
+
+body {
+	font-family: 'Work Sans';
+	line-height: 1.5;
+}
+
+h1, h2, h3 {
+	font-family: 'Playfair Display';
+	line-height: 1.2;
+}
+
+p {
+	margin-top: 0
+}
+
+p:last-child {
+	margin-bottom: 0
 }
