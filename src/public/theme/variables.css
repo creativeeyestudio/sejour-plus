@@ -69,6 +69,8 @@ http://ionicframework.com/docs/theming/ */
 	--ion-color-dark-shade: #292929;
 	--ion-color-dark-tint: #444444;
 
+	--text-primary: 'Playfair Display';
+	--text-secondary: 'Work Sans';
 }
 
 html {
@@ -76,12 +78,12 @@ html {
 }
 
 body {
-	font-family: 'Work Sans';
+	font-family: var(--text-secondary);
 	line-height: 1.5;
 }
 
 h1, h2, h3 {
-	font-family: 'Playfair Display';
+	font-family: var(--text-primary);
 	line-height: 1.2;
 }
 

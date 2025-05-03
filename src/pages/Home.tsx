@@ -1,5 +1,6 @@
-import { IonCard, IonCardHeader, IonCardTitle, IonContent } from '@ionic/react';
+import { IonContent } from '@ionic/react';
 import './Home.sass';
+import Card from '../components/Card';
 
 const Home: React.FC = () => {
 	return (
@@ -7,28 +8,13 @@ const Home: React.FC = () => {
 			<section className='content ion-padding-horizontal'>
 				<h1>Nom de l'hôtel</h1>
 				<div className='ion-margin-vertical'>
-					<IonCard className='ion-no-margin content__card' routerLink='services' routerDirection={'forward'}>
-						<img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-						<IonCardHeader>
-							<IonCardTitle children="Découvrir nos services" />
-						</IonCardHeader>
-					</IonCard>
+					<Card src={'https://ionicframework.com/docs/img/demos/card-media.png'} title={'Découvrir nos services'} link={'services'} />
 				</div>
 				<div className='ion-margin-vertical'>
-					<IonCard className='ion-no-margin content__card' routerLink='activites' routerDirection={'forward'}>
-						<img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-						<IonCardHeader>
-							<IonCardTitle children="Voir nos activités" />
-						</IonCardHeader>
-					</IonCard>
+					<Card src={'https://ionicframework.com/docs/img/demos/card-media.png'} title={'Voir nos activités'} link={'activites'} />
 				</div>
 				<div className='ion-margin-vertical'>
-					<IonCard className='ion-no-margin content__card' routerLink='regions' routerDirection={'forward'}>
-						<img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-						<IonCardHeader>
-							<IonCardTitle children="Découvrir notre région" />
-						</IonCardHeader>
-					</IonCard>
+					<Card src={'https://ionicframework.com/docs/img/demos/card-media.png'} title={'Découvrir notre région'} link={'regions'} />
 				</div>
 			</section>
 		</IonContent>
