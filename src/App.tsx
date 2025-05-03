@@ -37,6 +37,7 @@ import NavTab from './components/NavTab';
 import Services from './pages/Services';
 import Activities from './pages/Activities';
 import Activity from './pages/Activity';
+import Regions from './pages/Regions';
 
 setupIonicReact();
 
@@ -49,7 +50,8 @@ const App: React.FC = () => (
 					<Route exact path="/" render={() => <Home />} />
 					<Route exact path='/services' render={() => <Services />} />
 					<Route exact path='/activites' render={() => <Activities />} />
-					<Route path='/activite/:id' render={() => <Activity />}></Route>
+					<Route path='/activite/:id' render={() => <Activity />} />
+					<Route exact path='/regions' render={() => <Regions />} />
 				</IonRouterOutlet>
 				<NavTab />
 			</IonTabs>

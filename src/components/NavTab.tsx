@@ -10,7 +10,7 @@ const NavTab = () => {
             <IonTabButton tab="activites" href='/activites'>
                 <IonIcon icon={ businessOutline }></IonIcon>
             </IonTabButton>
-            <IonTabButton>
+            <IonTabButton tab="regions" href="/regions">
                 <IonIcon icon={ locationOutline }></IonIcon>
             </IonTabButton>
             <IonTabButton>
