@@ -45,12 +45,8 @@ const App: React.FC = () => (
 			<IonTabs className='ion-padding-top'>
 				<IonRouterOutlet className='ion-padding-top'>
 					<IonContent className='ion-padding-top ion-padding-horizontal'>
-						<Route exact path="/">
-							<Home />
-						</Route>
-						<Route path='/services'>
-							<Services />
-						</Route>
+						<Route exact path="/" render={() => <Home />} />
+						<Route exact path='/services' render={() => <Services />} />
 					</IonContent>
 				</IonRouterOutlet>
 				<NavTab />
