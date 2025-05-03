@@ -1,5 +1,6 @@
-import { IonCard, IonCardHeader, IonCardTitle, IonContent, IonLabel, IonSegment, IonSegmentButton, IonSegmentContent, IonSegmentView } from "@ionic/react"
+import { IonContent, IonLabel, IonSegment, IonSegmentButton, IonSegmentContent, IonSegmentView } from "@ionic/react"
 import './Activities.sass'
+import Card from "../components/Card"
 
 const Activities = () => {
     return(
@@ -10,34 +11,19 @@ const Activities = () => {
                 <IonSegmentView>
                     <IonSegmentContent id="detente" className="ion-padding-horizontal">
                         <div className='ion-margin-vertical'>
-                            <IonCard className='ion-no-margin content__card' routerDirection={'forward'} routerLink='activite/1'>
-                                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-                                <IonCardHeader>
-                                    <IonCardTitle children="Nom du service Détente" />
-                                </IonCardHeader>
-                            </IonCard>
+                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Détente"} link={"activite/1"}></Card>
                         </div>
                     </IonSegmentContent>
 
                     <IonSegmentContent id="gastronomie" className="ion-padding-horizontal">
-                        <div className='ion-margin-vertical'>
-                            <IonCard className='ion-no-margin content__card' routerDirection={'forward'} routerLink='activite/1'>
-                                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-                                <IonCardHeader>
-                                    <IonCardTitle children="Nom du service Gastronomie" />
-                                </IonCardHeader>
-                            </IonCard>
+                        <div className='ion-margin-vertical'>                        
+                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Détente"} link={"activite/1"}></Card>
                         </div>
                     </IonSegmentContent>
 
                     <IonSegmentContent id="nature" className="ion-padding-horizontal">
                         <div className='ion-margin-vertical'>
-                            <IonCard className='ion-no-margin content__card' routerDirection={'forward'} routerLink='activite/1'>
-                                <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-                                <IonCardHeader>
-                                    <IonCardTitle children="Nom du service Nature" />
-                                </IonCardHeader>
-                            </IonCard>
+                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Détente"} link={"activite/1"}></Card>
                         </div>
                     </IonSegmentContent>
                 </IonSegmentView>

@@ -1,10 +1,10 @@
 import { IonButton, IonContent } from '@ionic/react'
 import LayoutItem from '../components/LayoutItem'
 
-const Activity = () => {
+const Region = () => {
     return(
         <IonContent>
-            <LayoutItem title={"Nom de l'activité"} image={'https://ionicframework.com/docs/img/demos/card-media.png'}>
+            <LayoutItem title={"Nom de la spé région"} image={'https://ionicframework.com/docs/img/demos/card-media.png'}>
                 <div className="text-content ion-margin-vertical"></div>
                 <div className="btn-list">
                     <IonButton className="ion-margin-end ion-margin-bottom">Appeler</IonButton>
@@ -16,4 +16,4 @@ const Activity = () => {
     )
 }
 
-export default Activity
+export default Region
