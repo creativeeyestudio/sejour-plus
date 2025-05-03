@@ -49,7 +49,7 @@ const App: React.FC = () => (
 					<Route exact path="/" render={() => <Home />} />
 					<Route exact path='/services' render={() => <Services />} />
 					<Route exact path='/activites' render={() => <Activities />} />
-					<Route exact path='/activites/:id' render={() => <Activity />}></Route>
+					<Route path='/activite/:id' render={() => <Activity />}></Route>
 				</IonRouterOutlet>
 				<NavTab />
 			</IonTabs>
