@@ -2,6 +2,8 @@ import { IonButton, IonCol, IonGrid, IonIcon, IonRow } from "@ionic/react"
 import LayoutItem from "../components/LayoutItem"
 import { callOutline, linkOutline, mailOutline, mapOutline } from "ionicons/icons"
 
+import '../public/pages/infos.sass'
+
 const Infos = () => {
     return(
         <LayoutItem title={"Nom de l'hotel"} image={"https://ionicframework.com/docs/img/demos/card-media.png"}>

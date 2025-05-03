@@ -3,6 +3,8 @@ import { IonApp, IonRouterOutlet, IonTabs, setupIonicReact } from '@ionic/react'
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 
+/* Google Fonts */
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -31,7 +33,7 @@ import '@ionic/react/css/display.css';
 import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
-import './theme/variables.css';
+import './public/theme/variables.css';
 import Header from './components/Header';
 import NavTab from './components/NavTab';
 import Services from './pages/Services';
@@ -41,7 +43,10 @@ import Regions from './pages/Regions';
 import Region from './pages/Region';
 import Infos from './pages/Infos';
 
-setupIonicReact();
+setupIonicReact({
+	mode: 'ios',
+	animated: true
+});
 
 const App: React.FC = () => (
   	<IonApp>

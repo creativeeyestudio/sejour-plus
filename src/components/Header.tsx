@@ -1,4 +1,5 @@
 import { IonHeader, IonTitle, IonToolbar } from "@ionic/react"
+import '../public/layouts/header.sass'
 
 const Header = () => {
     return (

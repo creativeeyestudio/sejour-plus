@@ -1,6 +1,8 @@
 import { IonIcon, IonTabBar, IonTabButton } from "@ionic/react"
 import { bedOutline, businessOutline, locationOutline, notificationsOutline } from 'ionicons/icons';
 
+import '../public/layouts/nav-tab.sass'
+
 const NavTab = () => {
     return (
         <IonTabBar slot='bottom'>
