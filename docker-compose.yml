@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ionic-react-dev
     ports:
       - "8100:8100"  # Port par défaut d'Ionic serve
       - "35729:35729" # Live reload (si applicable)
