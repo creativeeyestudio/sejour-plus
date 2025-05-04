@@ -1,0 +1,15 @@
+name: 'sejour-plus'
+
+services:
+  ionic-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ionic-react-dev
+    ports:
+      - "8100:8100"  # Port par défaut d'Ionic serve
+      - "35729:35729" # Live reload (si applicable)
+    volumes:
+      - .:/app                   # Montage du code source local dans le conteneur
+      - /app/node_modules        # Évite de polluer le host avec les node_modules du conteneur
+    command: ionic serve --host=0.0.0.0 --port=8100 --disable-host-check
