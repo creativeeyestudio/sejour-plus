@@ -1,14 +1,14 @@
-name: 'sejour-plus'
+version: '3.8'
 
 services:
   ionic-app:
-    build:
+    build: 
       context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8100:8100"  # Port par défaut d'Ionic serve
-      - "35729:35729" # Live reload (si applicable)
+      dockerfile: Dockerfile.dev
     volumes:
-      - .:/app                   # Montage du code source local dans le conteneur
-      - /app/node_modules        # Évite de polluer le host avec les node_modules du conteneur
-    command: ionic serve --host=0.0.0.0 --port=8100 --disable-host-check
+      - .:/app       # Monte le projet pour le développement en live
+      - /app/node_modules # Pour éviter de remplacer node_modules du conteneur
+    ports:
+      - "8100:8100"  # Expose le serveur de dev Ionic
+    stdin_open: true
+    tty: true
