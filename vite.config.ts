@@ -10,6 +10,13 @@ export default defineConfig({
     react(),
     legacy()
   ],
+  server: {
+    host: '0.0.0.0',
+    port: 8100,
+    watch: {
+      usePolling: true,
+    }
+  },
   test: {
     globals: true,
     environment: 'jsdom',
