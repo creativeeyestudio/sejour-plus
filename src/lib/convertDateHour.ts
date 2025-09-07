@@ -1,14 +1,14 @@
 export class ConvertDateHour {
-    private readonly date: Date;
-    private locale: string;
+    private readonly dateValue: Date;
+    private readonly locale: string;
 
-    constructor(value: string, locale: string = 'fr-FR') {
-        this.date = new Date(value);
+    constructor(dateValue: string, locale: string = 'fr-FR') {
+        this.dateValue = new Date(dateValue);
         this.locale = locale;
     }
 
     convertToDate() {
-        return this.date.toLocaleDateString(this.locale, {
+        return this.dateValue.toLocaleDateString(this.locale, {
             day: '2-digit',
             month: '2-digit',
             year: 'numeric',
@@ -16,7 +16,7 @@ export class ConvertDateHour {
     }
 
     convertToHour() {
-        return this.date.toLocaleTimeString(this.locale, {
+        return this.dateValue.toLocaleTimeString(this.locale, {
             hour: '2-digit',
             minute: '2-digit',
         });

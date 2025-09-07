@@ -1,20 +1,37 @@
+import { HotelData } from "../interfaces/HotelData";
+import { ServiceList } from "../interfaces/service";
+
 export default class Api {
     
     constructor() {}
 
     // ------------------------------------
+    // Call Function
+    // ------------------------------------
+    async callApi(slug: string) {
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/${slug}`);
+        if (!res.ok) console.error(`Erreur lors de la récupération API (${slug})`);
+        return res.json();
+    }
+
+    // ------------------------------------
     // Hotel Data
     // ------------------------------------
-    async getHotelData() {
-        try {
-            const url = `${import.meta.env.VITE_API_URL}/api/hotels/1`;
-            const res = await fetch(url);
-            console.log(res);
-            if (!res.ok) console.error(`Erreur lors de la récupération API`);
-            const result = await res.json();
-            return result;
-        } catch (error) {
-            console.error(error)
-        }
+    async getHotelData(): Promise<HotelData> {
+        return this.callApi('hotels/1');
+    }
+
+    // ------------------------------------
+    // Categories
+    // ------------------------------------
+    async getCategories(internalHotel: string) {
+        return this.callApi(`categories/hotel-internal/${internalHotel}`)
+    }
+
+    // ------------------------------------
+    // Services
+    // ------------------------------------
+    async getServices(): Promise<ServiceList> {
+        return this.callApi(`services`);
     }
 }
