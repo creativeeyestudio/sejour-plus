@@ -1,7 +1,7 @@
 import { Activity } from "../interfaces/activity";
 import { CategoryList } from "../interfaces/category";
 import { HotelData } from "../interfaces/HotelData";
-import { Service, ServiceList } from "../interfaces/service";
+import { ServiceList } from "../interfaces/service";
 
 export default class Api {
     private baseUrl = import.meta.env.VITE_API_URL;
@@ -34,10 +34,6 @@ export default class Api {
     // ------------------------------------
     async getServices(): Promise<ServiceList> {
         return this.callApi<ServiceList>(`/api/services`);
-    }
-
-    async getService(slug: string): Promise<Service> {
-        return this.callApi<Service>(slug);
     }
 
     // ------------------------------------
