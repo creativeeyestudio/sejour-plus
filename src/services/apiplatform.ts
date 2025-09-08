@@ -1,16 +1,17 @@
+import { Activity } from "../interfaces/activity";
+import { CategoryList } from "../interfaces/category";
 import { HotelData } from "../interfaces/HotelData";
-import { ServiceList } from "../interfaces/service";
+import { Service, ServiceList } from "../interfaces/service";
 
 export default class Api {
-    
-    constructor() {}
+    private baseUrl = import.meta.env.VITE_API_URL;
 
     // ------------------------------------
     // Call Function
     // ------------------------------------
-    async callApi(slug: string) {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/${slug}`);
-        if (!res.ok) console.error(`Erreur lors de la récupération API (${slug})`);
+    private async callApi<T>(slug: string): Promise<T> {
+        const res = await fetch(`${this.baseUrl}${slug}`);
+        if (!res.ok) throw new Error(`Erreur lors de la récupération API (${slug})`);
         return res.json();
     }
 
@@ -18,20 +19,31 @@ export default class Api {
     // Hotel Data
     // ------------------------------------
     async getHotelData(): Promise<HotelData> {
-        return this.callApi('hotels/1');
+        return this.callApi<HotelData>('/api/hotels/1');
     }
 
     // ------------------------------------
     // Categories
     // ------------------------------------
-    async getCategories(internalHotel: string) {
-        return this.callApi(`categories/hotel-internal/${internalHotel}`)
+    async getCategories(internalHotel: string): Promise<CategoryList> {
+        return this.callApi<CategoryList>(`/api/categories/hotel-internal/${internalHotel}`)
     }
 
     // ------------------------------------
     // Services
     // ------------------------------------
     async getServices(): Promise<ServiceList> {
-        return this.callApi(`services`);
+        return this.callApi<ServiceList>(`/api/services`);
+    }
+
+    async getService(slug: string): Promise<Service> {
+        return this.callApi<Service>(slug);
+    }
+
+    // ------------------------------------
+    // Activités
+    // ------------------------------------
+    async getActivity(slug: string): Promise<Activity> {
+        return this.callApi<Activity>(slug);
     }
 }

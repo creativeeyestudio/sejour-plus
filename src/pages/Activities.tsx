@@ -1,43 +1,47 @@
 import { IonContent, IonLabel, IonSegment, IonSegmentButton, IonSegmentContent, IonSegmentView } from "@ionic/react"
 import './Activities.sass'
-import Card from "../components/Card"
+import { useEffect, useState } from "react"
+import Api from "../services/apiplatform"
+import { CategoryList } from "../interfaces/category"
+import ActivityLink from "../components/ActivityLink"
 
 const Activities = () => {
+    const [categories, setCategories] = useState<CategoryList | null>();
+
+    useEffect(() => {
+        async function fetchData() {
+            const dataFetch: CategoryList = await new Api().getCategories('1');
+            setCategories(dataFetch);
+        }
+
+        fetchData()
+    }, [categories])
+
     return(
         <IonContent className='ion-padding-top ion-padding-horizontal'>
             <section>
                 <h1 className="ion-padding-horizontal">Activités et Expériences</h1>
 
                 <IonSegmentView>
-                    <IonSegmentContent id="detente" className="ion-padding-horizontal">
-                        <div className='ion-margin-vertical'>
-                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Détente"} link={"activite/1"}></Card>
-                        </div>
-                    </IonSegmentContent>
-
-                    <IonSegmentContent id="gastronomie" className="ion-padding-horizontal">
-                        <div className='ion-margin-vertical'>                        
-                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Détente"} link={"activite/1"}></Card>
-                        </div>
-                    </IonSegmentContent>
-
-                    <IonSegmentContent id="nature" className="ion-padding-horizontal">
-                        <div className='ion-margin-vertical'>
-                            <Card src={"https://ionicframework.com/docs/img/demos/card-media.png"} title={"Nom du service Détente"} link={"activite/1"}></Card>
-                        </div>
-                    </IonSegmentContent>
+                    {categories && categories.totalItems < 1 && <p className="ion-margin">Aucune catégorie n'a encore été ajoutée</p>}
+                    {categories?.member.map((category) => (
+                        <IonSegmentContent key={category.id} id={`cat-${category.id}`} className="ion-padding-horizontal">
+                            {category.activities.length < 1 && <p className='ion-margin-vertical'>Il n'y a pas encore d'activité dans cette catégorie</p>}
+                            {category.activities.map((activity, index) => (
+                                <div key={index} className='ion-margin-vertical'>
+                                    <ActivityLink slugLink={activity} />
+                                </div>    
+                            ))}
+                        </IonSegmentContent>
+                    ))}
                 </IonSegmentView>
 
                 <IonSegment>
-                    <IonSegmentButton value='detente' contentId="detente">
-                        <IonLabel>Détente</IonLabel>
-                    </IonSegmentButton>
-                    <IonSegmentButton value='gastronomie' contentId="gastronomie">
-                        <IonLabel>Gastronomie</IonLabel>
-                    </IonSegmentButton>
-                    <IonSegmentButton value='nature' contentId="nature">
-                        <IonLabel>Nature</IonLabel>
-                    </IonSegmentButton>
+                    {categories?.member.map((category) => (
+                        <IonSegmentButton value={`cat-${category.id}`} contentId={`cat-${category.id}`} key={category.id}>
+                            <IonLabel>{category.catName}</IonLabel>
+                        </IonSegmentButton>    
+                    ))}
                 </IonSegment>
             </section>    
         </IonContent>
