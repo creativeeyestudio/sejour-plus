@@ -25,7 +25,7 @@ export default class Api {
     // ------------------------------------
     // Categories
     // ------------------------------------
-    async getCategories(internalHotel: string): Promise<CategoryList> {
+    async getCategories(internalHotel: '0' | '1'): Promise<CategoryList> {
         return this.callApi<CategoryList>(`/api/categories/hotel-internal/${internalHotel}`)
     }
 
