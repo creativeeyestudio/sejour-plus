@@ -1,4 +1,5 @@
 export interface Tourism {
+    id: number,
     tourismName: string,
     tourismContent: string,
     tourismReserve: string,

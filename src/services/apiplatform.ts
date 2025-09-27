@@ -2,6 +2,7 @@ import { Activity } from "../interfaces/activity";
 import { CategoryList } from "../interfaces/category";
 import { HotelData } from "../interfaces/HotelData";
 import { ServiceList } from "../interfaces/service";
+import { Tourism } from "../interfaces/tourism";
 
 export default class Api {
     private baseUrl = import.meta.env.VITE_API_URL;
@@ -41,5 +42,12 @@ export default class Api {
     // ------------------------------------
     async getActivity(slug: string): Promise<Activity> {
         return this.callApi<Activity>(slug);
+    }
+
+    // ------------------------------------
+    // Activités
+    // ------------------------------------
+    async getTourism(slug: string): Promise<Tourism> {
+        return this.callApi<Tourism>(slug);
     }
 }

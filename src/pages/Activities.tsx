@@ -53,16 +53,16 @@ const Activities = () => {
                     )}
                     {categories.member.map((category) => (
                         <IonSegmentContent key={category.id} id={`cat-${category.id}`} className="ion-padding-horizontal">
-                        {category.activities.length < 1 && (
-                            <p className="ion-margin-vertical">
-                                Il n'y a pas encore d'activité dans cette catégorie
-                            </p>
-                        )}
-                        {category.activities.map((activity, index) => (
-                            <div key={index} className="ion-margin-vertical">
-                                <ActivityLink slugLink={activity} />
-                            </div>
-                        ))}
+                            {category.activities.length < 1 && (
+                                <p className="ion-margin-vertical">
+                                    Il n'y a pas encore d'activité dans cette catégorie
+                                </p>
+                            )}
+                            {category.activities.map((activity, index) => (
+                                <div key={index} className="ion-margin-vertical">
+                                    <ActivityLink type="activity" slugLink={activity} />
+                                </div>
+                            ))}
                         </IonSegmentContent>
                     ))}
                 </IonSegmentView>

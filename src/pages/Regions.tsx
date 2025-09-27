@@ -62,7 +62,7 @@ const Regions = () => {
                     )}
                     {category.tourisms.map((activity, index) => (
                         <div key={index} className="ion-margin-vertical">
-                            <ActivityLink slugLink={activity} />
+                            <ActivityLink type="tourism" slugLink={activity} />
                         </div>
                     ))}
                     </IonSegmentContent>
