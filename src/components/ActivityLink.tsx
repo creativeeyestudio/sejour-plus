@@ -40,7 +40,7 @@ const ActivityLink = ({ slugLink, type }: ServiceLinkProps) => {
             link={
                 "actName" in data
                     ? `/activite/${data.id.toString()}`
-                    : `/tourisme/${data.id.toString()}`
+                    : `/region/${data.id.toString()}`
             }
         />
     );

@@ -17,13 +17,12 @@ const Activities = () => {
 
     useEffect(() => {
         async function fetchData() {
-        const dataFetch: CategoryList = await new Api().getCategories("1");
-        setCategories(dataFetch);
+            const dataFetch: CategoryList = await new Api().getCategories("1");
+            setCategories(dataFetch);
 
-        // Initialiser le segment avec la première catégorie
-        if (dataFetch?.member?.length) {
-            setSelectedSegment(`cat-${dataFetch.member[0].id}`);
-        }
+            if (dataFetch?.member?.length) {
+                setSelectedSegment(`cat-${dataFetch.member[0].id}`);
+            }
         }
 
         fetchData();

@@ -2,7 +2,7 @@ export interface Service {
     id: number;
     serviceName: string;
     serviceDesc: string;
-    servicePos: number
+    servicePos: number;
 }
 
 export interface ServiceList {

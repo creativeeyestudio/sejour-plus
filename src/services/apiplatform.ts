@@ -45,7 +45,7 @@ export default class Api {
     }
 
     // ------------------------------------
-    // Activités
+    // Tourisme
     // ------------------------------------
     async getTourism(slug: string): Promise<Tourism> {
         return this.callApi<Tourism>(slug);
