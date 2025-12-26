@@ -1,0 +1,32 @@
+# Dépendances
+node_modules
+.pnpm-store
+
+# Next / Payload
+.next
+.cache
+dist
+
+# Git
+.git
+.gitignore
+
+# Logs
+npm-debug.log
+pnpm-debug.log
+yarn-error.log
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+
+# OS
+.DS_Store
+
+# Tests
+playwright-report
+coverage
+
+# Env
+.env
+.env.*
