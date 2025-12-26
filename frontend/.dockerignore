@@ -1,0 +1,9 @@
+node_modules
+dist
+.angular
+.cache
+.git
+.gitignore
+Dockerfile*
+docker-compose*.yml
+.DS_Store

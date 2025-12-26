@@ -1,0 +1,32 @@
+FROM node:20-alpine
+
+# Dépendances nécessaires à sharp
+RUN apk add --no-cache \
+  libc6-compat \
+  python3 \
+  make \
+  g++ \
+  vips-dev
+
+WORKDIR /app
+
+# Installer pnpm
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+# Copier les fichiers de dépendances
+COPY package.json pnpm-lock.yaml* ./
+
+# Installer les deps
+RUN pnpm install
+
+# Copier le reste du projet
+COPY . .
+
+# Variables d'env pour dev
+ENV NODE_ENV=development
+ENV NEXT_TELEMETRY_DISABLED=1
+
+EXPOSE 3000
+
+# Lancer Payload / Next en dev
+CMD ["pnpm", "dev"]

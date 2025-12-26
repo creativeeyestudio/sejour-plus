@@ -1,0 +1,25 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Installer Angular CLI globalement
+RUN npm install -g @angular/cli@20
+
+# Copier les fichiers de dépendances
+COPY package.json package-lock.json* ./
+
+# Installer les dépendances
+RUN npm install
+
+# Copier le reste du projet
+COPY . .
+
+# Variables d'environnement dev
+ENV NODE_ENV=development
+ENV NG_CLI_ANALYTICS=false
+
+# Port Angular
+EXPOSE 4200
+
+# Lancer Angular en mode dev (accessible depuis l'extérieur du container)
+CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4200"]

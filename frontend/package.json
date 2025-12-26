@@ -1,7 +1,7 @@
 {
-  "name": "ionic-app-base",
+  "name": "sejour-plus-app",
   "version": "0.0.0",
-  "author": "Ionic Framework",
+  "author": "Com' A Votre Image",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
