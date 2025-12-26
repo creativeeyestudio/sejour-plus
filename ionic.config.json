@@ -1,7 +1,0 @@
-{
-  "name": "sejour-plus",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react-vite"
-}
