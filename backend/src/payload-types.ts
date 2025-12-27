@@ -124,6 +124,7 @@ export interface UserAuthOperations {
  */
 export interface User {
   id: number;
+  userType?: ('admin' | 'hotelier') | null;
   tenants?:
     | {
         tenant: number | Tenant;
@@ -261,6 +262,7 @@ export interface PayloadMigration {
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
+  userType?: T;
   tenants?:
     | T
     | {
