@@ -36,7 +36,10 @@ export default buildConfig({
   sharp,
   plugins: [
     multiTenantPlugin<Config>({
-      collections: {},
+      collections: {
+        tenants: {},
+      },
+      userHasAccessToAllTenants: () => true,
     }),
   ],
 })
